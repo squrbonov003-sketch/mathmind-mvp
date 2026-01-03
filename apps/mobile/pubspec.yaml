@@ -1,0 +1,16 @@
+name: mathmind_mobile
+description: "MathMind мобильное приложение: обучение решениям шаг за шагом"
+version: 0.1.0+1
+publish_to: "none"
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  http: ^1.2.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    environment:
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=mathmind
+      - POSTGRES_PASSWORD=mathmind
+      - POSTGRES_DB=mathmind
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
